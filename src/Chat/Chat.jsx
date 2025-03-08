@@ -4,7 +4,7 @@ import userImg from '../assets/user.png';
 import botImg from '../assets/bot.png';
 
 // Environment variable - keep track of in a config file
-const API_KEY = "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";
+const API_KEY = "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";
 const MODEL = 'google/gemini-2.0-flash-lite-preview-02-05:free';
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 

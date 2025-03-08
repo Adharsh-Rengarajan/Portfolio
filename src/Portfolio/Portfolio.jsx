@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: "marc",
     title: "MARC",
-    image: "src/assets/MARC.jpg",
+    image: "../assets/MARC.jpg",
     description: "MARC is an advanced web-based platform designed to optimize workflow management in the construction industry. It centralizes project tracking, streamlines communication, and reduces administrative burdens for contractors, accounts, and procurement teams. MARC enhances financial oversight, automates approval workflows, and ensures seamless procurement management. With real-time dashboards, workflow automation, and financial tracking, MARC improves decision-making and project efficiency. It integrates Fugu for collaboration, MapBox API for project visualization, and React Chart.js for data insights. Built with React, Node.js, Express, and MongoDB, MARC delivers a scalable, responsive, and user-friendly experience, empowering construction professionals to build smarter and manage better.",
     techStack: [
       "React.js",
@@ -23,7 +23,7 @@ const projectsData = [
   {
     id: "matchwise",
     title: "MatchWise",
-    image: "src/assets/MatchWise.jpg",
+    image: "../assets/MatchWise.jpg",
     description: "MatchWise is an innovative AI-driven job search platform that transforms traditional job matching by leveraging Generative AI and Large Language Models (LLMs). Unlike conventional keyword-based systems, MatchWise conducts deep resume and job description analysis to provide intelligent, personalized matches for both candidates and recruiters. Candidates receive tailored job recommendations, SWOT analysis, and skill assessments, while recruiters gain access to AI-matched candidates and job posting tools. Built with a React frontend, Flask backend, and MongoDB database, MatchWise ensures scalability, security, and seamless user experience. This platform empowers job seekers and hiring managers with data-driven insights for more effective employment connections.",
     techStack: [
       "React",
@@ -37,7 +37,7 @@ const projectsData = [
   {
     id: "echosense",
     title: "EchoSense",
-    image: "src/assets/EchoSense.jpg",
+    image: "../assets/EchoSense.jpg",
     description: "EchoSense-Predictive-Analytics is a cutting-edge AI-powered system designed to analyze ECG data and predict potential cardiac conditions with high accuracy. This project leverages supervised machine learning to classify various heart conditions and generate actionable insights for early cardiac risk assessment. Utilizing the annotated CODE-15% dataset, it ensures reliable and scalable analysis of extensive ECG records. Advanced preprocessing, feature engineering, and model optimization techniques enhance predictive capabilities. The system is built for robustness, supporting large-scale datasets while maintaining flexibility. By integrating modern AI frameworks, it provides intelligent ECG analysis, aiding healthcare professionals in proactive monitoring and timely intervention for cardiac health.",
     techStack: [
       "React",
@@ -55,7 +55,7 @@ const timelineData = [
     date: "Sep 2024 - Present",
     title: "Master of Science in Software Engineering Systems",
     institution: "Northeastern University, Boston",
-    image: "src/assets/neu.png",
+    image: "../assets/neu.png",
     detailsTitle: "Courses Taken",
     details: [
       "Object Oriented Design",
@@ -68,7 +68,7 @@ const timelineData = [
     date: "Sep 2020 - May 2024",
     title: "Bachelor of Engineering in Computer Science and Engineering",
     institution: "K. Ramakrishnan College of Engineering, Trichy",
-    image: "src/assets/KRCE.png",
+    image: "../assets/KRCE.png",
     detailsTitle: "Major Subjects",
     details: [
       "Object Oriented Programming",
@@ -85,7 +85,7 @@ const timelineData = [
     date: "Oct 2023 - Feb 2024",
     title: "Software Testing Intern",
     institution: "Amalgam Rx",
-    image: "src/assets/Amalgam.png",
+    image: "../assets/Amalgam.png",
     detailsTitle: "Roles & Responsibilities",
     details: [
       "Executed comprehensive testing across various software models, enhancing system reliability and performance.",
@@ -100,23 +100,23 @@ const timelineData = [
 
 const skillsData = {
   programmingLanguages: [
-    { name: "Python", icon: "src/assets/python.png" },
-    { name: "Java", icon: "src/assets/java.png" },
-    { name: "JavaScript", icon: "src/assets/js.png" }
+    { name: "Python", icon: "../assets/python.png" },
+    { name: "Java", icon: "../assets/java.png" },
+    { name: "JavaScript", icon: "../assets/js.png" }
   ],
   frontendFrameworks: [
-    { name: "React", icon: "src/assets/React.png" }
+    { name: "React", icon: "../assets/React.png" }
   ],
   backendFrameworks: [
-    { name: "Node.js", icon: "src/assets/Node JS.png" },
-    { name: "Express.js", icon: "src/assets/Express.png" },
-    { name: "Servlets", icon: "src/assets/Servlets.png" },
-    { name: "Spring", icon: "src/assets/Spring.png" },
-    { name: "Flask", icon: "src/assets/Flask.png" },
+    { name: "Node.js", icon: "../assets/Node JS.png" },
+    { name: "Express.js", icon: "../assets/Express.png" },
+    { name: "Servlets", icon: "../assets/Servlets.png" },
+    { name: "Spring", icon: "../assets/Spring.png" },
+    { name: "Flask", icon: "../assets/Flask.png" },
 
   ],
   databases: [
-    { name: "MongoDB", icon: "src/assets/MongoDB.png" }
+    { name: "MongoDB", icon: "../assets/MongoDB.png" }
   ]
 };
 
@@ -212,7 +212,7 @@ const TimelineItem = ({ item, index }) => {
       </div>
       <div className="dropdown-container">
         <img
-          src="src/assets/down-arrow.png"
+          src="../assets/down-arrow.png"
           alt="Toggle Details"
           className={`dropdown-icon ${expanded ? "rotated" : ""}`}
           onClick={toggleExpanded}
@@ -368,21 +368,21 @@ const Contact = () => {
           <p>Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
           
           <div className="contact-item">
-            <img src="src/assets/email.png" alt="Email" className="contact-icon" />
+            <img src="../assets/email.png" alt="Email" className="contact-icon" />
             <span>rengarjan.ad@northeastern.edu</span>
           </div>
           
           <div className="contact-item">
-            <img src="src/assets/placeholder.png" alt="Location" className="contact-icon" />
+            <img src="../assets/placeholder.png" alt="Location" className="contact-icon" />
             <span>Boston, Massachusetts</span>
           </div>
           
           <div className="contact-social">
             <a href="https://github.com/Adharsh-Rengarajan" target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/github.png" alt="GitHub" className="social-icon" />
+              <img src="../assets/github.png" alt="GitHub" className="social-icon" />
             </a>
             <a href="https://www.linkedin.com/in/adharsh-rengarajan" target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+              <img src="../assets/linkedin.png" alt="LinkedIn" className="social-icon" />
             </a>
           </div>
         </motion.div>
@@ -586,13 +586,13 @@ const Portfolio = () => {
             {/* Social Links */}
             <div className="social-links">
               <a href="https://leetcode.com/u/Adharsh_Rengarajan/" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/Leetcode.png" alt="LeetCode" className="social-icon" />
+                <img src="../assets/Leetcode.png" alt="LeetCode" className="social-icon" />
               </a>
               <a href="https://github.com/Adharsh-Rengarajan" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/github.png" alt="GitHub" className="social-icon" />
+                <img src="../assets/github.png" alt="GitHub" className="social-icon" />
               </a>
               <a href="https://www.linkedin.com/in/adharsh-rengarajan" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+                <img src="../assets/linkedin.png" alt="LinkedIn" className="social-icon" />
               </a>
             </div>
 
@@ -600,13 +600,13 @@ const Portfolio = () => {
             <div className="chess-challenge">
               <span>Think you can beat me in chess?</span>
               <a href="https://www.chess.com/member/adharsh_r" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/chess.com.png" alt="Chess.com" className="social-icon" />
+                <img src="../assets/chess.com.png" alt="Chess.com" className="social-icon" />
               </a>
             </div>
           </div>
 
           {/* Profile Image */}
-          <img src="src/assets/Me.jpg" alt="My Profile" className="about-image" />
+          <img src="../assets/Me.jpg" alt="My Profile" className="about-image" />
         </div>
       </section>
 

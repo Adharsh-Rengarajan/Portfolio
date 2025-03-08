@@ -4,11 +4,39 @@ import { motion, AnimatePresence  } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+import MARCImage from "../assets/MARC.jpg";
+import MatchWiseImage from "../assets/MatchWise.jpg";
+import EchoSenseImage from "../assets/EchoSense.jpg";
+import NEUImage from "../assets/neu.png";
+import KRCEImage from "../assets/KRCE.png";
+import AmalgamImage from "../assets/Amalgam.png";
+import PythonIcon from "../assets/python.png";
+import JavaIcon from "../assets/java.png";
+import JSIcon from "../assets/js.png";
+import ReactIcon from "../assets/React.png";
+import NodeJSIcon from "../assets/Node JS.png";
+import ExpressIcon from "../assets/Express.png";
+import ServletsIcon from "../assets/Servlets.png";
+import SpringIcon from "../assets/Spring.png";
+import FlaskIcon from "../assets/Flask.png";
+import MongoDBIcon from "../assets/MongoDB.png";
+import DownArrowIcon from "../assets/down-arrow.png";
+import EmailIcon from "../assets/email.png";
+import LocationIcon from "../assets/placeholder.png";
+import GitHubIcon from "../assets/github.png";
+import LinkedInIcon from "../assets/linkedin.png";
+import LeetCodeIcon from "../assets/Leetcode.png";
+import ChessIcon from "../assets/chess.com.png";
+import ProfileImage from "../assets/Me.jpg";
+import ARLogo from "../assets/AR.png";
+import ResumeImage from "../assets/Resume.png"
+import { nav } from "framer-motion/client";
+
 const projectsData = [
   {
     id: "marc",
     title: "MARC",
-    image: "../assets/MARC.jpg",
+    image: MARCImage,
     description: "MARC is an advanced web-based platform designed to optimize workflow management in the construction industry. It centralizes project tracking, streamlines communication, and reduces administrative burdens for contractors, accounts, and procurement teams. MARC enhances financial oversight, automates approval workflows, and ensures seamless procurement management. With real-time dashboards, workflow automation, and financial tracking, MARC improves decision-making and project efficiency. It integrates Fugu for collaboration, MapBox API for project visualization, and React Chart.js for data insights. Built with React, Node.js, Express, and MongoDB, MARC delivers a scalable, responsive, and user-friendly experience, empowering construction professionals to build smarter and manage better.",
     techStack: [
       "React.js",
@@ -23,7 +51,7 @@ const projectsData = [
   {
     id: "matchwise",
     title: "MatchWise",
-    image: "../assets/MatchWise.jpg",
+    image: MatchWiseImage,
     description: "MatchWise is an innovative AI-driven job search platform that transforms traditional job matching by leveraging Generative AI and Large Language Models (LLMs). Unlike conventional keyword-based systems, MatchWise conducts deep resume and job description analysis to provide intelligent, personalized matches for both candidates and recruiters. Candidates receive tailored job recommendations, SWOT analysis, and skill assessments, while recruiters gain access to AI-matched candidates and job posting tools. Built with a React frontend, Flask backend, and MongoDB database, MatchWise ensures scalability, security, and seamless user experience. This platform empowers job seekers and hiring managers with data-driven insights for more effective employment connections.",
     techStack: [
       "React",
@@ -37,7 +65,7 @@ const projectsData = [
   {
     id: "echosense",
     title: "EchoSense",
-    image: "../assets/EchoSense.jpg",
+    image: EchoSenseImage,
     description: "EchoSense-Predictive-Analytics is a cutting-edge AI-powered system designed to analyze ECG data and predict potential cardiac conditions with high accuracy. This project leverages supervised machine learning to classify various heart conditions and generate actionable insights for early cardiac risk assessment. Utilizing the annotated CODE-15% dataset, it ensures reliable and scalable analysis of extensive ECG records. Advanced preprocessing, feature engineering, and model optimization techniques enhance predictive capabilities. The system is built for robustness, supporting large-scale datasets while maintaining flexibility. By integrating modern AI frameworks, it provides intelligent ECG analysis, aiding healthcare professionals in proactive monitoring and timely intervention for cardiac health.",
     techStack: [
       "React",
@@ -55,7 +83,7 @@ const timelineData = [
     date: "Sep 2024 - Present",
     title: "Master of Science in Software Engineering Systems",
     institution: "Northeastern University, Boston",
-    image: "../assets/neu.png",
+    image: NEUImage,
     detailsTitle: "Courses Taken",
     details: [
       "Object Oriented Design",
@@ -68,7 +96,7 @@ const timelineData = [
     date: "Sep 2020 - May 2024",
     title: "Bachelor of Engineering in Computer Science and Engineering",
     institution: "K. Ramakrishnan College of Engineering, Trichy",
-    image: "../assets/KRCE.png",
+    image: KRCEImage,
     detailsTitle: "Major Subjects",
     details: [
       "Object Oriented Programming",
@@ -85,7 +113,7 @@ const timelineData = [
     date: "Oct 2023 - Feb 2024",
     title: "Software Testing Intern",
     institution: "Amalgam Rx",
-    image: "../assets/Amalgam.png",
+    image: AmalgamImage,
     detailsTitle: "Roles & Responsibilities",
     details: [
       "Executed comprehensive testing across various software models, enhancing system reliability and performance.",
@@ -100,76 +128,79 @@ const timelineData = [
 
 const skillsData = {
   programmingLanguages: [
-    { name: "Python", icon: "../assets/python.png" },
-    { name: "Java", icon: "../assets/java.png" },
-    { name: "JavaScript", icon: "../assets/js.png" }
+    { name: "Python", icon: PythonIcon },
+    { name: "Java", icon: JavaIcon },
+    { name: "JavaScript", icon: JSIcon }
   ],
   frontendFrameworks: [
-    { name: "React", icon: "../assets/React.png" }
+    { name: "React", icon: ReactIcon }
   ],
   backendFrameworks: [
-    { name: "Node.js", icon: "../assets/Node JS.png" },
-    { name: "Express.js", icon: "../assets/Express.png" },
-    { name: "Servlets", icon: "../assets/Servlets.png" },
-    { name: "Spring", icon: "../assets/Spring.png" },
-    { name: "Flask", icon: "../assets/Flask.png" },
-
+    { name: "Node.js", icon: NodeJSIcon },
+    { name: "Express.js", icon: ExpressIcon },
+    { name: "Servlets", icon: ServletsIcon },
+    { name: "Spring", icon: SpringIcon },
+    { name: "Flask", icon: FlaskIcon }
   ],
   databases: [
-    { name: "MongoDB", icon: "../assets/MongoDB.png" }
+    { name: "MongoDB", icon: MongoDBIcon }
   ]
 };
 
 
 
-const ProjectCard = ({ project }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleExpand = (e) => {
-    e.preventDefault(); // Prevent default behavior
-    e.stopPropagation(); // Stop event propagation
-    setIsExpanded(!isExpanded);
-  };
 
+const ProjectCard = ({ project, index, isExpanded, toggleExpand }) => {
   return (
-    <motion.div 
-      className="project-card"
+    <motion.div
+      className={`project-card project-card-${index + 1}`}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <img src={project.image} alt={project.title} className="project-card-image" />
-      <div className="project-card-content">
-        <h3 className="project-card-title">{project.title}</h3>
-        <p className="project-card-description">
+      <img src={project.image} alt={project.title} className={`project-card-image-${index + 1}`} />
+      <div className={`project-card-content-${index + 1}`}>
+        <h3 className={`project-card-title-${index + 1}`}>{project.title}</h3>
+        <p className={`project-card-description-${index + 1}`}>
           {isExpanded ? project.description : `${project.description.split(' ').slice(0, 10).join(' ')}...`}
         </p>
       </div>
-      <div className="project-card-expand">
+      <div className={`project-card-expand-${index + 1}`}>
         <ChevronDown
-          className={`expand-icon ${isExpanded ? 'rotated' : ''}`}
+          className={`expand-icon-${index + 1} ${isExpanded ? 'rotated' : ''}`}
           onClick={toggleExpand}
         />
       </div>
-      <div className={`project-card-details ${isExpanded ? 'expanded' : ''}`}>
-        <div className="tech-stack">
-          <h4 className="tech-stack-title">Tech Stack</h4>
-          <div className="tech-stack-list">
-            {project.techStack.map((tech, index) => (
-              <span key={index} className="tech-item">{tech}</span>
-            ))}
+      {isExpanded && (
+        <div className={`project-card-details-${index + 1} expanded`}>
+          <div className={`tech-stack-${index + 1}`}>
+            <h4 className={`tech-stack-title-${index + 1}`}>Tech Stack</h4>
+            <div className={`tech-stack-list-${index + 1}`}>
+              {project.techStack.map((tech, idx) => (
+                <span key={idx} className={`tech-item-${index + 1}`}>{tech}</span>
+              ))}
+            </div>
           </div>
+          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-link">
+            View on GitHub
+          </a>
         </div>
-        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-link">
-          View on GitHub
-        </a>
-      </div>
+      )}
     </motion.div>
   );
 };
 
+
+
 // Projects component
-const Projects = () => {
+const Projects = ({ projectsData }) => {
+  const [expandedProject, setExpandedProject] = useState(null);
+
+  const toggleExpand = (projectId) => {
+    setExpandedProject((prev) => (prev === projectId ? null : projectId));
+  };
+
   return (
     <section id="projects" className="projects-section section glass">
       <motion.h2
@@ -180,28 +211,29 @@ const Projects = () => {
       >
         My Projects
       </motion.h2>
-      
+
       <div className="projects-container">
-        {projectsData.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projectsData.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+            isExpanded={expandedProject === project.id}
+            toggleExpand={() => toggleExpand(project.id)}
+          />
         ))}
       </div>
     </section>
   );
 };
 
-const TimelineItem = ({ item, index }) => {
-  const [expanded, setExpanded] = React.useState(false);
+
+const TimelineItem = ({ item }) => {
+  const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(!expanded);
 
   return (
-    <motion.div
-      className={`timeline-item ${item.title.includes("Intern") ? "experience" : "education"}`}
-      key={index}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <motion.div className="timeline-item" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
       <div className="timeline-content">
         <img src={item.image} alt={item.institution} className="timeline-image" />
         <div className="timeline-text">
@@ -211,12 +243,7 @@ const TimelineItem = ({ item, index }) => {
         </div>
       </div>
       <div className="dropdown-container">
-        <img
-          src="../assets/down-arrow.png"
-          alt="Toggle Details"
-          className={`dropdown-icon ${expanded ? "rotated" : ""}`}
-          onClick={toggleExpanded}
-        />
+        <img src={DownArrowIcon} alt="Toggle Details" className={`dropdown-icon ${expanded ? "rotated" : ""}`} onClick={toggleExpanded} />
       </div>
       {expanded && (
         <div className="dropdown-content">
@@ -368,21 +395,21 @@ const Contact = () => {
           <p>Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
           
           <div className="contact-item">
-            <img src="../assets/email.png" alt="Email" className="contact-icon" />
+            <img src={EmailIcon} alt="Email" className="contact-icon" />
             <span>rengarjan.ad@northeastern.edu</span>
           </div>
           
           <div className="contact-item">
-            <img src="../assets/placeholder.png" alt="Location" className="contact-icon" />
+      <img src={LocationIcon} alt="Location" className="contact-icon" />
             <span>Boston, Massachusetts</span>
           </div>
           
           <div className="contact-social">
             <a href="https://github.com/Adharsh-Rengarajan" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/github.png" alt="GitHub" className="social-icon" />
+              <img src={GitHubIcon} alt="GitHub" className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com/in/adharsh-rengarajan" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+            <a href="https://www.linkedin.com/in/adharsh-rengarajan/" target="_blank" rel="noopener noreferrer">
+              <img src={LinkedInIcon} alt="LinkedIn" className="social-icon" />
             </a>
           </div>
         </motion.div>
@@ -509,7 +536,7 @@ const Portfolio = () => {
     <div className="portfolio-container">
       {/* Navigation Bar */}
       <nav className="navbar">
-        <h1 className="logo">My Portfolio</h1>
+      <img src={ARLogo} alt="AR Logo" className="logo" onPress={() => navigate('/')}/>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education & Experience</a></li>
@@ -585,14 +612,17 @@ const Portfolio = () => {
 
             {/* Social Links */}
             <div className="social-links">
-              <a href="https://leetcode.com/u/Adharsh_Rengarajan/" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/Leetcode.png" alt="LeetCode" className="social-icon" />
+              <a href={"https://leetcode.com/u/Adharsh_Rengarajan/"} target="_blank" rel="noopener noreferrer">
+                <img src={LeetCodeIcon} alt="LeetCode" className="social-icon" />
               </a>
               <a href="https://github.com/Adharsh-Rengarajan" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/github.png" alt="GitHub" className="social-icon" />
+                <img src={GitHubIcon} alt="GitHub" className="social-icon" />
               </a>
               <a href="https://www.linkedin.com/in/adharsh-rengarajan" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+                <img src={LinkedInIcon} alt="LinkedIn" className="social-icon" />
+              </a>
+              <a href="https://drive.google.com/file/d/1Y0HL0OZrUtBSiZYtagEkIugQYEwFR6rW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <img src={ResumeImage} alt="LinkedIn" className="social-icon" />
               </a>
             </div>
 
@@ -600,13 +630,13 @@ const Portfolio = () => {
             <div className="chess-challenge">
               <span>Think you can beat me in chess?</span>
               <a href="https://www.chess.com/member/adharsh_r" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/chess.com.png" alt="Chess.com" className="social-icon" />
+                <img src={ChessIcon} alt="Chess.com" className="social-icon" />
               </a>
             </div>
           </div>
 
           {/* Profile Image */}
-          <img src="../assets/Me.jpg" alt="My Profile" className="about-image" />
+          <img src={ProfileImage} alt="My Profile" className="about-image" />
         </div>
       </section>
 
@@ -630,7 +660,7 @@ const Portfolio = () => {
 
       {/* Skills Section */}
       <Skills />
-      <Projects />
+      <Projects projectsData={projectsData}/>
       <Contact />
     </div>
   );

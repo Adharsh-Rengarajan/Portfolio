@@ -4,32 +4,33 @@ import { motion, AnimatePresence  } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-import MARCImage from "../assets/MARC.jpg";
-import MatchWiseImage from "../assets/MatchWise.jpg";
-import EchoSenseImage from "../assets/EchoSense.jpg";
-import NEUImage from "../assets/neu.png";
-import KRCEImage from "../assets/KRCE.png";
-import AmalgamImage from "../assets/Amalgam.png";
-import PythonIcon from "../assets/python.png";
-import JavaIcon from "../assets/java.png";
-import JSIcon from "../assets/js.png";
-import ReactIcon from "../assets/React.png";
-import NodeJSIcon from "../assets/Node JS.png";
-import ExpressIcon from "../assets/Express.png";
-import ServletsIcon from "../assets/Servlets.png";
-import SpringIcon from "../assets/Spring.png";
-import FlaskIcon from "../assets/Flask.png";
-import MongoDBIcon from "../assets/MongoDB.png";
-import DownArrowIcon from "../assets/down-arrow.png";
-import EmailIcon from "../assets/email.png";
-import LocationIcon from "../assets/placeholder.png";
-import GitHubIcon from "../assets/github.png";
-import LinkedInIcon from "../assets/linkedin.png";
-import LeetCodeIcon from "../assets/Leetcode.png";
-import ChessIcon from "../assets/chess.com.png";
-import ProfileImage from "../assets/Me.jpg";
-import ARLogo from "../assets/AR.png";
-import ResumeImage from "../assets/Resume.png"
+const MARCImage = "/assets/MARC.jpg";
+const MatchWiseImage = "/assets/MatchWise.jpg";
+const EchoSenseImage = "/assets/EchoSense.jpg";
+const NEUImage = "/assets/neu.png";
+const KRCEImage = "/assets/KRCE.png";
+const AmalgamImage = "/assets/Amalgam.png";
+const PythonIcon = "/assets/python.png";
+const JavaIcon = "/assets/Java.png";
+const JSIcon = "/assets/JS.png";
+const ReactIcon = "/assets/React.png";
+const NodeJSIcon = "/assets/Node JS.png";  // Check if there is a space in filename
+const ExpressIcon = "/assets/Express.png";
+const ServletsIcon = "/assets/Servlets.png";
+const SpringIcon = "/assets/Spring.png";
+const FlaskIcon = "/assets/Flask.png";
+const MongoDBIcon = "/assets/MongoDB.png";
+const DownArrowIcon = "/assets/down-arrow.png";
+const EmailIcon = "/assets/email.png";
+const LocationIcon = "/assets/placeholder.png";
+const GitHubIcon = "/assets/github.png";
+const LinkedInIcon = "/assets/linkedin.png";
+const LeetCodeIcon = "/assets/Leetcode.png";
+const ChessIcon = "/assets/chess.com.png";
+const ProfileImage = "/assets/Me.jpg";
+const ARLogo = "/assets/AR.png";
+const ResumeImage = "/assets/Resume.png";
+
 import { nav } from "framer-motion/client";
 
 const projectsData = [

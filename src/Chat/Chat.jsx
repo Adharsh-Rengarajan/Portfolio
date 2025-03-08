@@ -1,12 +1,13 @@
 import React, { useState, useRef, useCallback } from 'react';
 import './Chat.css';
-import userImg from '../assets/user.png';
-import botImg from '../assets/bot.png';
-import ARImg from "../assets/AR.png";
+const userImg = "/assets/user.png"; 
+const botImg = "/assets/bot.png";    
+const ARImg = "/assets/AR.png";      
+
 import { useNavigate } from 'react-router-dom';
 
 // Environment variable - keep track of in a config file
-const API_KEY = "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";
+const API_KEY = "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";
 const MODEL = 'meta-llama/llama-3.2-1b-instruct:free';
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
